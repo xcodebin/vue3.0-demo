@@ -1,58 +1,38 @@
 {
-  "name": "vue3demo",
+  "name": "hello-world",
   "version": "0.1.0",
-  "private": true,
+  "license": "ISC",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build && node build/cssCopy.js && node build/jsCopy.js && node build/htmlReplace.js",
+    "start": "vue-cli-service build && node build/cssCopy.js && node build/jsCopy.js && node build/htmlReplace.js && node server/index.js",
+    "serve": "node server/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.4.2",
-    "vue-router": "^3.2.0"
+    "@kazupon/vue-i18n-loader": "^0.4.1",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-i18n": "^8.15.3",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/eslint-config-typescript": "^5.0.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard",
-      "@vue/typescript/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "autodll-webpack-plugin": "^0.4.2",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "koa": "^2.11.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-connect": "^1.0.2",
+    "nodemon": "^2.0.2",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  }
 }
